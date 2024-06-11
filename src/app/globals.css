@@ -8,22 +8,30 @@
   --background-end-rgb: 255, 255, 255;
 }
 
-@media (prefers-color-scheme: dark) {
-  :root {
-    --foreground-rgb: 255, 255, 255;
-    --background-start-rgb: 0, 0, 0;
-    --background-end-rgb: 0, 0, 0;
-  }
+.dark{
+  --background-colour: #000000;
+  --text-colour: #ffffff;
 }
 
+.light{
+  --background-colour: #ffffff;
+  --text-colour: #000000;
+}
+
+
 body {
-  color: rgb(var(--foreground-rgb));
-  background: linear-gradient(
-      to bottom,
-      transparent,
-      rgb(var(--background-end-rgb))
-    )
-    rgb(var(--background-start-rgb));
+  background-color: var(--background-colour);
+  color: var(--text-colour);
+}
+
+#navbar{
+  background-color: var(--background-colour);
+  color: var(--text-colour);
+}
+
+#contact{
+  background-color: var(--background-colour);
+  color: var(--text-colour);
 }
 
 @layer utilities {
